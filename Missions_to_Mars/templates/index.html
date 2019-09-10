@@ -25,35 +25,6 @@
             <h1>Mission to Mars</h1>
             <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
-        <h1 style="color:#f5a442; text-align:center; margin-bottom:20px; border-bottom:1px solid #f5a442; padding-bottom:10px;">
-            Mars News
-        </h1>
-
-        <div class="jumbotron">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Latest Mars News</h3>
-                        </div>
-                        <div class="panel-body">
-                            <h4>{{ mars_info.news_title }}</h4>
-                            <p>{{ mars_info.news_p }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Latest Mars Weather</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>{{ mars_info.mars_weather }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <h1 style="color:#f5a442; text-align:center; margin-bottom:20px; border-bottom:1px solid #f5a442; padding-bottom:10px;">
             Mars Information
@@ -62,19 +33,39 @@
         <div class="jumbotron">
             <div class="row">
                 <div class="col-md-5">
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Mars Facts</h3>
+                            <h3 class="panel-title" style="color:#f5a442;">Mars Facts</h3>
                         </div>
                         <div class="panel-body">
                                 {{ mars_info.mars_facts | safe }}
+                        </div>
+                    </div>
+                    <br> <br>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" style="color:#f5a442;">Latest Mars News</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h4>{{ mars_info.news_title }}</h4>
+                            <p>{{ mars_info.news_p }}</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" style="color:#f5a442;">Latest Mars Weather</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>{{ mars_info.mars_weather }}</p>
                         </div>
                     </div>
                 </div>
                     <div class="col-md-7">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Featured Image</h3>
+                                <h3 class="panel-title" style="color:#f5a442;">Featured Image</h3>
                             </div>
                         <div class="panel-body">
                                 <img class="img-fluid" src="{{mars_info.featured_image_url}}" alt="Featured Image" style="width:100%;">
@@ -93,10 +84,9 @@
         
           <div class="col-md-3">
               <div class="card text-white bg-primary">
-                  <div class="card-header">{{ hemi.title }}</div>
                   <img class="img-fluid w-100" src="{{ hemi.img_url }}" alt="{{ hemi.title }}">
-                
-            </div>
+                  <div class="card-header">{{ hemi.title }}</div>
+              </div>
           </div>
         
         {% endfor %}
